@@ -7,7 +7,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-size: 16px;
+    line-height: 1.4;
     color: #3b2727;
     background-color: #c7b4b4;
 }
@@ -27,6 +28,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
   }
 
 nav ul {
@@ -102,10 +104,12 @@ nav a {
 .welcome {
     display: grid;
     grid-template-columns: 1fr;
+    align-items: center;
     grid-gap: 20px;
     padding: 20px;
     background-color: #755d5d;
     text-align: center;
+    
 }
 
 .welcome h2 {
@@ -130,6 +134,11 @@ nav a {
     align-items: center;
 }
 /* Product Showcase */
+@media only screen and (max-width: 768px) {
+    .product-showcase {
+        grid-template-columns: 1fr;
+    }
+}
 .product-showcase {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -149,6 +158,11 @@ nav a {
 }
 
 /* Featured Products */
+@media only screen and (max-width: 768px) {
+    .featured-product {
+        width: 100%;
+    }
+}
 .featured-products {
     display: grid;
     grid-template-columns: 1fr;
@@ -200,7 +214,7 @@ nav a {
 }
 .featured-product button {
     font-size: 18px;
-    background-color: #493c3c; /* changed to a pink color */
+    background-color: #493c3c; 
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -328,3 +342,4 @@ nav a {
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
   }
+}
